@@ -6,3 +6,7 @@ all: $(obj) vdb2dense
 
 vdb2dense: vdb2dense.o
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS) $(LIBS)
+
+clean:
+	rm -f vdb2dense $(obj)
+.PHONY: clean
